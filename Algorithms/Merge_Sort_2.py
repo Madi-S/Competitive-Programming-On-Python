@@ -1,3 +1,4 @@
+from random import randint
 
 
 def merge_sort(array):
@@ -31,4 +32,9 @@ def merge_sort(array):
     return array
 
 
-print(merge_sort([3, 65, 43, 98, 65, 32]))
+print(merge_sort([randint(1, 1000) for _ in range(15)]))
+print(merge_sort([randint(1, 1000) for _ in range(15)]))
+print(merge_sort([randint(1, 1000) for _ in range(15)]))
+print(merge_sort([randint(1, 1000) for _ in range(15)]))
+print(merge_sort([randint(1, 1000) for _ in range(15)]))
+print(merge_sort([randint(1, 1000) for _ in range(15)]))
