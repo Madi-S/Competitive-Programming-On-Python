@@ -11,7 +11,7 @@ def binary_search(nums, n):
 
     lower_bound, upper_bound = 0, len(nums) - 1
 
-    while lower_bound < upper_bound:
+    while lower_bound <= upper_bound:
         mid_bound = (lower_bound + upper_bound) // 2
         mid_value = nums[mid_bound]
 
@@ -30,6 +30,6 @@ def binary_search(nums, n):
     return False
 
 
-assert binary_search([123, 345, 123123, 542, 76, 0, 1233], 542)
+binary_search([123, 345, 123123, 542, 76, 0, 1233], 123123)
 assert binary_search(list(range(123, 300, 5)), 193)
-assert not binary_search(list(range(353, 9943, 12)), 8323)
+assert binary_search(list(range(353, 9943, 12)), 8323) == False

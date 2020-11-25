@@ -7,7 +7,6 @@
 from timeitf import timeit
 
 
-
 @timeit
 def sieve_of_eratosthenes(num):
     if num > 2:
@@ -33,7 +32,6 @@ def sieve_of_eratosthenes(num):
 
             incr = 2
 
-        print(nums)
         return [num for num in nums if isinstance(num, int)]
 
     return None
