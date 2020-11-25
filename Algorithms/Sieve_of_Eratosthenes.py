@@ -1,21 +1,11 @@
-import time
-
 # Basically, Sieve of Eratosthenes is the way to find all prime numbers up to given number that > 2
 # We define a step variable, which is by default 2
 # Then we remove every second element starting from 2 (but step should not equal to number we remove)
 # After completing it, we keep incrementing step, until it exists in the nums list
 # After what we loop through again but starting from 3, we remove every step * 2 th element. E.g.: if step = 3, then delete every sixth (3*2) element, or if step = 5, then remove every tenth (5*2) element
-# We keep doing this until our step (not step * 2) becomes more than square root of last number. E.g.: list up to 300 nums, we stop looping when step hits 18 
+# We keep doing this until our step (not step * 2) becomes more than square root of last number. E.g.: list up to 300 nums, we stop looping when step hits 18 because 10*19 > 300
+from timeitf import timeit
 
-
-def timeit(f):
-    def inner(*args, **kwargs):
-        start = time.time()
-        res = f(*args, **kwargs)
-        finish = time.time()
-        print(f'{round(finish-start, 5)} seconds taken: {f.__name__}')
-        return res
-    return inner
 
 
 @timeit

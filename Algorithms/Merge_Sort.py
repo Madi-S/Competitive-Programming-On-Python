@@ -1,6 +1,8 @@
 from random import randint  # To create pseudorandom array to sort
+from timeitf import timeit
 
 
+@timeit
 def merge_sort(arr):
     # If left or right array has more than 1 element
     if len(arr) > 1:

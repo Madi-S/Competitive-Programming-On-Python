@@ -1,9 +1,9 @@
 # Selection sort pushes minimum element to the end
 # Thus this sort method divides array in two: first part with minimum elements - sorted, second - unsorted
-
 from random import randint
+from timeitf import timeit
 
-
+@timeit
 def sort(arr):
     for i in range(len(arr) - 1):
         # Store minimum position - it will increase over time because left part will become sorted and no need to check these values because they are the min values

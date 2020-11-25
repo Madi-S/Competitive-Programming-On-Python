@@ -1,6 +1,8 @@
 from random import randint
+from timeitf import timeit
 
 
+@timeit
 def merge_sort(array):
     if len(array) > 1:
         middle = len(array) // 2

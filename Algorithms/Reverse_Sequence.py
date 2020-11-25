@@ -1,5 +1,8 @@
+# Pythonic way to reverse a list without [::-1] or reverse() method
+from timeitf import timeit
 
 
+@timeit
 def reverse(seq):
     # Take simmetric values and swap them
 
