@@ -32,9 +32,5 @@ def merge_sort(array):
     return array
 
 
-print(merge_sort([randint(1, 1000) for _ in range(15)]))
-print(merge_sort([randint(1, 1000) for _ in range(15)]))
-print(merge_sort([randint(1, 1000) for _ in range(15)]))
-print(merge_sort([randint(1, 1000) for _ in range(15)]))
-print(merge_sort([randint(1, 1000) for _ in range(15)]))
-print(merge_sort([randint(1, 1000) for _ in range(15)]))
+for _ in range(10):
+    print(merge_sort([randint(1, 1000) for _ in range(15)]))
