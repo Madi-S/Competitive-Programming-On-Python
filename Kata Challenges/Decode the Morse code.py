@@ -18,9 +18,7 @@ MORSE_CODE = {'.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E', '..-.':
 def decodeMorse(morse_code):
     if morse_code in MORSE_CODE:
         return MORSE_CODE[morse_code]
-    morse_code = morse_code.replace('   ', ' space ')
-    print(morse_code)
-    return ''.join(list(map(lambda a: MORSE_CODE[a] if a != 'space' else ' ', morse_code.split()))).strip()
+    return ''.join(list(map(lambda a: MORSE_CODE[a] if a != 'space' else ' ',  morse_code.replace('   ', ' space ').split()))).strip()
 
 
 print(decodeMorse('   .   . '))
