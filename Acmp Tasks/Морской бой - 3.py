@@ -6,14 +6,33 @@ import re
 
 
 def count(n, m, battle):
-    hor = [i for i in battle.split('\n')]
+    hor = [list(i) for i in battle.split('\n')]
+    shipss = []
     print(hor[0], '\n', hor[1], '\n', hor[2])
-    for p in hor:
-        res = re.finditer('[\w]+', p)
+    for p in range(len(hor)):
+        res = re.finditer(r'[\w]+', ''.join(hor[p]))
         for r in res:
-            print(r.group(), r.span(), p)
+            ships = []
+            print(f'R of res {r.group()} appended')
+            ships.append(r.group())
+            i = p + 1
+            while i < len(hor):
+                st, end = r.start() + 1, r.end() + 1
+                to_search = ''.join(hor[i][st:end])
+                res2 = re.match(r'[\w]+', st, end)
+                print(f'{res2} in {to_search}')
+                for j in range(st, end):
+                    hor[i][j] = '-'
+                if res2:
+                    print(f'Res2 {res2.group()} appended')
+                    ships.append(res2.group())
+                else:
+                    break
+                i += 1
+            shipss.append(ships)
+    print(shipss)
 
 
-count(3, 8, '''---SSS--
+count(3, 8, '''X--SSS--
 XX--S-X-
 X-S---S-''')
