@@ -22,7 +22,7 @@ def count_time(t1, t2, s1, s2, s):
         distance_traveled -= s2
         time_count += t2
 
-    return time_count
+    return round(time_count, 2)
 
 
 print(count_time(10, 1, 100, 20, 500))
