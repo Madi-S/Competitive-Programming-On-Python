@@ -1,14 +1,11 @@
+from sys import setrecursionlimit
+setrecursionlimit(100000)
 
 
-def fast_fibonacci(n, memo):
-    if not n in memo:
-        memo[n] = fast_fibonacci(n-1, memo) + fast_fibonacci(n-2, memo)
-    return memo[n]
+def fibonacci(n, computed={0: 0, 1: 1}):
+    if n not in computed:
+        computed[n] = fibonacci(n-1, computed) + fibonacci(n-2, computed)
+    return computed[n]
 
 
-def fibonacci(n):
-    memo = {0: 1, 1: 1}
-    return fast_fibonacci(n-1, memo)
-
-
-print(fibonacci(70))
+print(fibonacci(1000))
