@@ -12,6 +12,11 @@ Hint: You're not meant to calculate the factorial. Find another way to find the 
 
 '''
 
+# Just count 5 and 2 pairs. Apparently, there will be 2s instead of 5s, so rather than countring 2s and 5s, just count number of 5 occurences.
+# If first number is 300. Divide it by 5 and save the whole part 60 (also number of zeros must be incremented by 60).
+# Then divide 60 by 5. Get 12 (increment amount of zeros by 12) and then 12 should be also divided by 5 -> 2 (increment zeros count by 2).
+# Since 2 is less than 5 - we stop our calculations.
+
 
 def zeros(n):
     number_of_0 = 0
@@ -20,4 +25,5 @@ def zeros(n):
         number_of_0 += n
     return number_of_0
 
-print(zeros(1123))
+
+print(zeros(300))

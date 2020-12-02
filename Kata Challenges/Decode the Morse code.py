@@ -21,4 +21,4 @@ def decodeMorse(morse_code):
     return ''.join(list(map(lambda a: MORSE_CODE[a] if a != 'space' else ' ',  morse_code.replace('   ', ' space ').split()))).strip()
 
 
-print(decodeMorse('   .   . '))
+print(decodeMorse('.- .... ---.. -...'))
