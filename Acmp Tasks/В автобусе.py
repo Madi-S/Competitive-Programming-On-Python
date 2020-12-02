@@ -13,9 +13,10 @@ From https://acmp.ru/index.asp?main=task&id_task=952
 
 def count_prices(adults: int, childs: int):
     if adults and childs:
+        max_ = adults + childs - 1
         if adults > childs:
-            return adults, adults + childs - 1
-        return childs, adults + childs - 1
+            return adults, max_
+        return childs, max_
 
     elif adults and not childs:
         return adults, adults
@@ -23,4 +24,4 @@ def count_prices(adults: int, childs: int):
     return 'Impossible'
 
 
-print(count_prices(10, 5))
+print(count_prices(1, 8))
