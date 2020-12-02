@@ -13,6 +13,8 @@ From https://acmp.ru/index.asp?main=task&id_task=952
 
 def count_prices(adults: int, childs: int):
     if adults and childs:
+        if adults > childs:
+            return adults, adults + childs - 1
         return childs, adults + childs - 1
 
     elif adults and not childs:
@@ -21,4 +23,4 @@ def count_prices(adults: int, childs: int):
     return 'Impossible'
 
 
-print(count_prices(5, 5))
+print(count_prices(10, 5))
