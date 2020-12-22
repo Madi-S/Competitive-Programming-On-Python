@@ -14,16 +14,19 @@ class User:
 
 	@property
 	def rank(self):
-		# if self._rank == 0:
-		# 	self._rank = 1
-		# elif self._rank > 8:
-		# 	self._rank = 8
 		return self._rank
 
 	def inc_progress(self, activity_rank: int):
+		print(self._rank, self._progress, activity_rank)
 		diff = self._ranks.index(activity_rank) - self._ranks.index(self._rank)
+
 		if diff <= -2:
 			return
 		elif diff == 0:
-			diff = 1 
-		
+			diff = 1
+
+		self._progress += diff ** 2 * 10
+		while self._progress >= 100 and self._rank < 9:
+			self._rank += 1
+			self._progress -= 100
+		print(self._rank, self._progress, activity_rank)
