@@ -10,10 +10,8 @@ Multiplications and divisions have a higher priority and should be performed lef
 Additions and subtractions have a lower priority and should also be performed left-to-right.
 '''
 
-import re
-
 class Calculator(object):
-	
+	e = eval
 	@staticmethod
 	def evaluate(string):
-		return eval(string)
+		return e(string)
