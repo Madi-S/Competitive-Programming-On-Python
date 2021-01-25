@@ -32,8 +32,8 @@ def format_duration(seconds):
 
     if output.startswith(', '):
         output = output[2:]
-    if output.startswith(' and'):
-        output = output[5:]
+    if output.startswith('and'):
+        output = output[4:]
 
     return output
 
