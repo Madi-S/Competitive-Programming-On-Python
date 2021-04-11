@@ -1,4 +1,4 @@
-def largest_arrangement(numbers):
+def largest_arrangement_1(numbers):
     res = ''
     digits = {}
     
@@ -25,4 +25,35 @@ def largest_arrangement(numbers):
             
             
     return int(res)
-    
+
+
+from itertools import permutations
+def largest_arrangement_2(numbers):
+    return max(int(''.join(p)) for p in permutations(map(str, numbers)))
+
+
+from time import time
+
+args = (
+    [7, 78, 79, 72, 709, 7, 94],
+    [8, 6, 590, 70],
+    [6, 73, 79, 356, 7],
+    [64, 29, 5, 9, 982, 3],
+    [3487, 103559, 243],
+    [7, 78, 79, 72, 709, 7, 94],
+    )
+
+
+start = time()
+for _ in range(1000):
+    for arg in args:
+        largest_arrangement_1(arg)
+print(time() - start)
+
+
+
+start = time()
+for _ in range(1000):
+    for arg in args:
+        largest_arrangement_2(arg)
+print(time() - start)
