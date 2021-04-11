@@ -57,3 +57,8 @@ for _ in range(1000):
     for arg in args:
         largest_arrangement_2(arg)
 print(time() - start)
+
+
+# Low-level solution #1 is much better that using permutations in solution #2
+# 1 func: 0.1189265251159668 sec
+# 2 func: 6.754024982452393  sec
