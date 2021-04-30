@@ -11,9 +11,15 @@ powers = {
     9: [9,1,9,1], 
 }
 
-def last_digit(n1, n2):
+def last_digit_1(n1, n2):
 	if n2 == 0:
 		return 1
+
 	n1_last = int(str(n1)[-1])
 	power = powers[n1_last]
+
 	return power[n2 % 4 - 1]
+
+
+def last_digit_2(n1, n2):
+	return pow(n1, n2, 10)
