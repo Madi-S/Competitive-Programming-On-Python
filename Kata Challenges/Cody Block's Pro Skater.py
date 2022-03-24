@@ -13,7 +13,7 @@ def run(tricks):
             if curr_expected_points < prev_expected_points:
                 result[trick['name']] = n_times_performed
                 break
-            
+
             n_times_performed += 1
 
     return result
@@ -21,4 +21,5 @@ def run(tricks):
 
 args = [{'name': 'kickflip', 'points': 100,
          'mult_base': .8, 'probability': .85}]
+
 print(run(args))
