@@ -1,10 +1,10 @@
 from functools import reduce
 from itertools import cycle
 
-def reduce_by_rules(lst, rules):
- 	r = cycle(rules)
- 	return reduce(lambda a, b: next(r)(a, b), lst)
 
+def reduce_by_rules(lst, rules):
+    r = cycle(rules)
+    return reduce(lambda a, b: next(r)(a, b), lst)
 
 
 rules = [lambda a, b: a + b, lambda a, b: a - b]
