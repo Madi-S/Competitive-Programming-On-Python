@@ -1,4 +1,3 @@
-
 def simplify(poly):
     poly += '+'
     if not poly[0] in '+-':

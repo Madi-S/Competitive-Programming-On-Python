@@ -1,28 +1,28 @@
-
 def likes(names):
-	if not names:
-		return 'no one likes this'
-	res = [names.pop(0)]
-	
-	if names:
+    if not names:
+        return 'no one likes this'
+    res = [names.pop(0)]
 
-		if len(names) >= 3:
-			othres_count = len(names) - 1
-			names = names[:1]
+    if names:
 
-			names.append(str(othres_count) + ' others')
+        if len(names) >= 3:
+            othres_count = len(names) - 1
+            names = names[:1]
 
-		for name in names:
-			res.append(', ' + name)
+            names.append(str(othres_count) + ' others')
 
-		res[-1] = ' and' + res[-1][1:]
-		res += ' like'
+        for name in names:
+            res.append(', ' + name)
 
-	else:
-		res += ' likes'
-	res += ' this'
+        res[-1] = ' and' + res[-1][1:]
+        res += ' like'
 
-	return ''.join(res)
+    else:
+        res += ' likes'
+    res += ' this'
+
+    return ''.join(res)
+
 
 '''
 likes([]) # must be "no one likes this"

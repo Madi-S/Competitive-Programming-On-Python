@@ -7,7 +7,7 @@ def page_digits(pages):
         # 10 - 1 = 9
         # 100 - 10 = 90
         # 1000 - 100 = 900
-        
+
         if pages <= n_pages:
             res += pages * i
             # 3 * 1 = 3
@@ -22,5 +22,6 @@ def page_digits(pages):
             # 900 * 3 = 2700
         i += 1
     return res
+
 
 print(page_digits(100))

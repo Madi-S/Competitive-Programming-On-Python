@@ -1,5 +1,6 @@
 from time import time
 
+
 start = time()
 
 n = 10

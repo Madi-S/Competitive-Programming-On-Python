@@ -1,40 +1,39 @@
-
 def count_Kprimes(k, start, end):
-	res = []
+    res = []
 
-	for num in range(start, end + 1):
-		if count_prime_divisors(num) == k:
-			res.append(num)
+    for num in range(start, end + 1):
+        if count_prime_divisors(num) == k:
+            res.append(num)
 
-	return res
+    return res
 
 
 def count_prime_divisors(n):
-	res = 0
-	i = 2
-	while i * i <= n:
-		while n % i == 0:
-			n //= i
-			res += 1
-		i += 1
+    res = 0
+    i = 2
+    while i * i <= n:
+        while n % i == 0:
+            n //= i
+            res += 1
+        i += 1
 
-	if n > 1:
-		res += 1
+    if n > 1:
+        res += 1
 
-	return res
+    return res
+
 
 def puzzle(s):
-	a = count_Kprimes(1, 0, s)
-	b = count_Kprimes(3, 0, s)
-	c = count_Kprimes(7, 0, s)
-	res = 0
-	for e1 in a:
-		for e2 in b:
-			for e3 in c:
-				if (e1 + e2 + e3) == s:
-					res += 1
-	return res
-
+    a = count_Kprimes(1, 0, s)
+    b = count_Kprimes(3, 0, s)
+    c = count_Kprimes(7, 0, s)
+    res = 0
+    for e1 in a:
+        for e2 in b:
+            for e3 in c:
+                if (e1 + e2 + e3) == s:
+                    res += 1
+    return res
 
 
 print(count_Kprimes(2, 4, 100))

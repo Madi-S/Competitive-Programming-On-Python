@@ -15,7 +15,8 @@ def format_duration(seconds):
         return 'now'
 
     output = []
-    data = {31536000 :'year', 86400: 'day', 3600: 'hour', 60: 'minute', 1: 'second'}
+    data = {31536000: 'year', 86400: 'day',
+            3600: 'hour', 60: 'minute', 1: 'second'}
 
     for secs, s in data.items():
         if seconds >= secs:

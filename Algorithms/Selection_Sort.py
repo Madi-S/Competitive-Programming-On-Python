@@ -3,6 +3,7 @@
 from random import randint
 from timeitf import timeit
 
+
 @timeit
 def sort(arr):
     for i in range(len(arr) - 1):
@@ -18,7 +19,7 @@ def sort(arr):
         arr[i], arr[min_pos] = arr[min_pos], arr[i]
 
         print(f'Processing:   {arr}')
-        
+
     return arr
 
 

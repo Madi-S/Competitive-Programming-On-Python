@@ -11,8 +11,9 @@ def sort(a):
     for i in range(1, len(a)):
         # Swap values until left value is less equal than the a[i] (value we are currently working with) and i is positive number
         while a[i-1] > a[i] and i > 0:
-            a[i-1], a[i] = a[i], a[i-1] # Swap left value with current
-            i -= 1                      # Decrease counter i by 1 (because then we will work with value left by 1)
+            a[i-1], a[i] = a[i], a[i-1]  # Swap left value with current
+            # Decrease counter i by 1 (because then we will work with value left by 1)
+            i -= 1
 
     return a
 

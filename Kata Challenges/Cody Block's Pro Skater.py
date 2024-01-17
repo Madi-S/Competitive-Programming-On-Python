@@ -6,7 +6,8 @@ def run(tricks):
         curr_expected_points = 0
 
         while True:
-            points += trick['points'] * (trick['mult_base'] ** n_times_performed)
+            points += trick['points'] * \
+                (trick['mult_base'] ** n_times_performed)
             prev_expected_points = curr_expected_points
             curr_expected_points = trick['probability'] ** n_times_performed * points
 

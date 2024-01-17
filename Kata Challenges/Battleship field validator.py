@@ -46,14 +46,14 @@ def isValidPoint(row, col, field):
 
 
 def getShipSize(row, col, field):
-	try:
-    	if not isValidPoint(row, col, field):
-    	    raise ValueError('Invalid disposition')
-    	field[row][col] = -1
-    	if row != len(field) and field[row + 1][col] == 1:
-    	    return 1 + getShipSize(row + 1, col, field)
-    	if col != len(field[0]) and field[row][col + 1] == 1:
-    	    return 1 + getShipSize(row, col + 1, field)
-   	except:
-   		pass
+    try:
+        if not isValidPoint(row, col, field):
+            raise ValueError('Invalid disposition')
+        field[row][col] = -1
+        if row != len(field) and field[row + 1][col] == 1:
+            return 1 + getShipSize(row + 1, col, field)
+        if col != len(field[0]) and field[row][col + 1] == 1:
+            return 1 + getShipSize(row, col + 1, field)
+    except:
+        pass
     return 1

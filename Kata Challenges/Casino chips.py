@@ -7,5 +7,6 @@ def solve(arr):
     days = math.floor(min_)
     return days
 
+
 if __name__ == '__main__':
     print(solve([12, 12, 12]))

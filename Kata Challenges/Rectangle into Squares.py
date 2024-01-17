@@ -13,11 +13,10 @@ You will return an array or a string (depending on the language; Shell bash, Pow
 '''
 
 
-
 def sqInRect(x, y):
     if x == y:
         return None
-        
+
     result = []
     while y != x:
         if y > x:
@@ -28,5 +27,5 @@ def sqInRect(x, y):
             result.append(y)
 
     result.append(y)
-    
+
     return result

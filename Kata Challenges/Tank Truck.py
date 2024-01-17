@@ -27,7 +27,6 @@ def tankvol(h, d, vt):
     area = (radius ** 2) * (math.pi * alpha /
                             180 - math.sin(math.radians(alpha))) / 2
 
-
     length = total_volume / (math.pi * radius ** 2)
 
     result = abs(math.floor(area * length))
